@@ -8,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            line-height: 1.6;
         }
         h1, h2 {
             color: #333;
@@ -26,16 +27,37 @@
             background-color: #f4f4f4;
             font-weight: bold;
         }
+        ul {
+            padding-left: 20px;
+        }
         .highlight {
             background-color: #f9f9f9;
             font-style: italic;
         }
-    </style>
-  <!-- Minified version -->
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
-<!-- Un-Minified version -->
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                display: none;
+            }
+            td {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: #555;
+                margin-right: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Análisis del Grupo Musical</h1>
@@ -48,29 +70,29 @@
             <th>Descanso</th>
         </tr>
         <tr>
-            <td>Nico</td>
-            <td>16 (Dirige: 7)</td>
-            <td>5</td>
+            <td data-label="Integrante">Nico</td>
+            <td data-label="Presente/Dirige">16 (Dirige: 7)</td>
+            <td data-label="Descanso">5</td>
         </tr>
         <tr>
-            <td>Marta</td>
-            <td>15 (Dirige: 5)</td>
-            <td>6</td>
+            <td data-label="Integrante">Marta</td>
+            <td data-label="Presente/Dirige">15 (Dirige: 5)</td>
+            <td data-label="Descanso">6</td>
         </tr>
         <tr>
-            <td>Jack</td>
-            <td>14</td>
-            <td>7</td>
+            <td data-label="Integrante">Jack</td>
+            <td data-label="Presente/Dirige">14</td>
+            <td data-label="Descanso">7</td>
         </tr>
         <tr>
-            <td>Vane</td>
-            <td>16</td>
-            <td>5</td>
+            <td data-label="Integrante">Vane</td>
+            <td data-label="Presente/Dirige">16</td>
+            <td data-label="Descanso">5</td>
         </tr>
         <tr>
-            <td>Luis</td>
-            <td>13 (Dirige: 1)</td>
-            <td>8</td>
+            <td data-label="Integrante">Luis</td>
+            <td data-label="Presente/Dirige">13 (Dirige: 1)</td>
+            <td data-label="Descanso">8</td>
         </tr>
     </table>
 
@@ -81,40 +103,40 @@
             <th>Repeticiones</th>
         </tr>
         <tr>
-            <td>Otra vez</td>
-            <td>6</td>
+            <td data-label="Canción">Otra vez</td>
+            <td data-label="Repeticiones">6</td>
         </tr>
         <tr>
-            <td>Bueno eres tú</td>
-            <td>5</td>
+            <td data-label="Canción">Bueno eres tú</td>
+            <td data-label="Repeticiones">5</td>
         </tr>
         <tr>
-            <td>Rey de Reyes</td>
-            <td>4</td>
+            <td data-label="Canción">Rey de Reyes</td>
+            <td data-label="Repeticiones">4</td>
         </tr>
         <tr>
-            <td>Noche de Paz</td>
-            <td>3</td>
+            <td data-label="Canción">Noche de Paz</td>
+            <td data-label="Repeticiones">3</td>
         </tr>
         <tr>
-            <td>Santa la noche</td>
-            <td>3</td>
+            <td data-label="Canción">Santa la noche</td>
+            <td data-label="Repeticiones">3</td>
         </tr>
         <tr>
-            <td>Gracia Sublime</td>
-            <td>3</td>
+            <td data-label="Canción">Gracia Sublime</td>
+            <td data-label="Repeticiones">3</td>
         </tr>
         <tr>
-            <td>Tumbas a jardines</td>
-            <td>3</td>
+            <td data-label="Canción">Tumbas a jardines</td>
+            <td data-label="Repeticiones">3</td>
         </tr>
         <tr>
-            <td>Me sostendrá</td>
-            <td>2</td>
+            <td data-label="Canción">Me sostendrá</td>
+            <td data-label="Repeticiones">2</td>
         </tr>
         <tr>
-            <td>Recibe toda la gloria</td>
-            <td>2</td>
+            <td data-label="Canción">Recibe toda la gloria</td>
+            <td data-label="Repeticiones">2</td>
         </tr>
     </table>
 
@@ -133,16 +155,16 @@
             <th>Días Dirigiendo</th>
         </tr>
         <tr>
-            <td>Nico</td>
-            <td>7</td>
+            <td data-label="Integrante">Nico</td>
+            <td data-label="Días Dirigiendo">7</td>
         </tr>
         <tr>
-            <td>Marta</td>
-            <td>5</td>
+            <td data-label="Integrante">Marta</td>
+            <td data-label="Días Dirigiendo">5</td>
         </tr>
         <tr>
-            <td>Luis</td>
-            <td>1</td>
+            <td data-label="Integrante">Luis</td>
+            <td data-label="Días Dirigiendo">1</td>
         </tr>
     </table>
 
